@@ -11,8 +11,7 @@ The Code Book contains a section dedicated to data structures description ([Data
 `tidy_data.txt` is a space-separated text file. The first row represents file header containing variables names listed and described in the [Variables](#variables) section. 
 
 ## Variables <a name="variables"></a>
-
-Each row contains, for a given subject and activity, 79 averaged signal measurements.
+For a given subject and activity, each row contains 79 averaged signal measurements.
 
 ### Identifiers <a name="identifiers"></a>
 
@@ -218,7 +217,7 @@ The zip file containing the source data is located at [https://d396qusza40orc.cl
 The following transformations were applied to the source data:
 
 1. The training and test sets were merged to create one data set.
-1. The measurements on the mean and standard deviation (i.e. signals containing the strings `mean` and `std`) were extracted for each measurement, and the others were discarded.
+1. The measurements on the mean and standard deviation (i.e. signals containing the strings `mean` and `std`) were extracted for each measurement.
 1. The activity identifiers (originally coded as integers between 1 and 6) were replaced with descriptive activity names (see [Identifiers](#identifiers) section).
 1. The variable names were replaced with descriptive variable names (e.g. `tBodyAcc-mean()-X` was expanded to `timeDomainBodyAccelerometerMeanX`), using the following set of rules:
 	- Special characters (i.e. `(`, `)`, and `-`) were removed
