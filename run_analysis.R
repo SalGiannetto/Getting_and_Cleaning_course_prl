@@ -1,5 +1,19 @@
 library (dplyr)
 
+# download zip file containing data if it hasn't already been downloaded
+zipUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+zipFile <- "UCI HAR Dataset.zip"
+
+if (!file.exists(zipFile)) {
+  download.file(zipUrl, zipFile, mode = "wb")
+}
+
+# unzip zip file containing data if data directory doesn't already exist
+dataPath <- "UCI HAR Dataset"
+if (!file.exists(dataPath)) {
+  unzip(zipFile)
+}
+
 data_Path<-"C:\\Users\\giannetto_sa\\Documents\\data science\\GandC - Prj\\UCI HAR Dataset"
 ############################
 ############################
@@ -22,7 +36,7 @@ testActivity <- read.table(file.path(data_Path, "test", "y_test.txt"))
 features <- read.table(file.path(data_Path, "features.txt"), as.is = TRUE)
 
 # read activity labels
-activities <- read.table(file.path(dat_aPath, "activity_labels.txt"))
+activities <- read.table(file.path(data_Path, "activity_labels.txt"))
 colnames(activities) <- c("activityId", "activityLabel")
 ###########################################
 ###########################################
@@ -60,7 +74,7 @@ humanActivity$activity <- factor(humanActivity$activity,
                                  levels = activities[, 1], labels = activities[, 2])
 
 ##############################################################################
-# Step 4 - Appropriately label the data set with descriptive variable names
+# 5th Step - Appropriately label the data set with descriptive variable names
 ##############################################################################
 
 # get column names
@@ -85,10 +99,9 @@ humanActivityCols <- gsub("BodyBody", "Body", humanActivityCols)
 # use new labels as column names
 colnames(humanActivity) <- humanActivityCols
 
-##############################################################################
-# Step 5 - Create a second, independent tidy set with the average of each
-#          variable for each activity and each subject
-##############################################################################
+####################################################################################################
+# 6th Step - Second tidy set with the average of each variable for each activity and each subject ##
+####################################################################################################
 
 # group by subject and activity and summarise using mean
 humanActivityMeans <- humanActivity %>% 
