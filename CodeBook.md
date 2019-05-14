@@ -4,7 +4,7 @@ This code book refers to `tidy_data.txt` file located in this repository.
 
 See the `README.md` file of this repository for background information and scope.
 
-The Code Book contains a section dedicated to data structures description [Data](#data) section, its variables are listed in the [Variables](#variables) section, and the transformations that were carried out to obtain the data set based on the source data are presented in the [Transformations](#transformations) section.
+The Code Book contains a section dedicated to data structures description ([Data](#data) section), variables ([Variables](#variables) section), and transformations applied to obtain the final data set ([Transformations](#transformations) section).
 
 ## Data <a name="data"></a>
 
