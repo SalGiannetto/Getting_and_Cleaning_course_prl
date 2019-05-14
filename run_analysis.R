@@ -1,20 +1,21 @@
 library (dplyr)
 
+#setting the working path
+data_Path<-"C:\\Users\\giannetto_sa\\Documents\\data science\\GandC - Prj\\UCI HAR Dataset"
+setwd(data_Path)
+
 # download zip file containing data if it hasn't already been downloaded
 zipUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-zipFile <- "UCI HAR Dataset.zip"
+zipFile <- paste(data_Path,"UCI HAR Dataset.zip",sep="")
 
 if (!file.exists(zipFile)) {
   download.file(zipUrl, zipFile, mode = "wb")
 }
 
 # unzip zip file containing data if data directory doesn't already exist
-dataPath <- "UCI HAR Dataset"
-if (!file.exists(dataPath)) {
+if (!file.exists(data_Path)) {
   unzip(zipFile)
 }
-
-data_Path<-"C:\\Users\\giannetto_sa\\Documents\\data science\\GandC - Prj\\UCI HAR Dataset"
 ############################
 ############################
 # 1st Step - Reading data ##                                                   
