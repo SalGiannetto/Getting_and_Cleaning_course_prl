@@ -1,10 +1,10 @@
 # Code book for Coursera *Getting and Cleaning Data* course project
 
-The data set that this code book pertains to is located in the `tidy_data.txt` file of this repository.
+This code book refers to `tidy_data.txt` file located in this repository.
 
-See the `README.md` file of this repository for background information on this data set.
+See the `README.md` file of this repository for background information and scope.
 
-The structure of the data set is described in the [Data](#data) section, its variables are listed in the [Variables](#variables) section, and the transformations that were carried out to obtain the data set based on the source data are presented in the [Transformations](#transformations) section.
+The Code Book contains a section dedicated to data structures description [Data](#data) section, its variables are listed in the [Variables](#variables) section, and the transformations that were carried out to obtain the data set based on the source data are presented in the [Transformations](#transformations) section.
 
 ## Data <a name="data"></a>
 
