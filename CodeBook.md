@@ -8,9 +8,7 @@ The Code Book contains a section dedicated to data structures description ([Data
 
 ## Data <a name="data"></a>
 
-The `tidy_data.txt` data file is a text file, containing space-separated values.
-
-The first row contains the names of the variables, which are listed and described in the [Variables](#variables) section, and the following rows contain the values of these variables. 
+`tidy_data.txt` is a space-separated text file. The first row represents file header containing variables names listed and described in the [Variables](#variables) section. 
 
 ## Variables <a name="variables"></a>
 
